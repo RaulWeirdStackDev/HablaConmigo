@@ -3,6 +3,7 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/style.css',
+  '/manifest.json',
   // Comida
   '/comida/index.html',
   '/comida/assets/img/fideos.jpeg',
