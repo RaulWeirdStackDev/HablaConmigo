@@ -13,7 +13,6 @@
 <body>
     <div class="container">
         <h1>HablaConmigo</h1>
-        <button id="installButton" style="display: none; margin: 10px; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Instalar HablaConmigo</button>
         <a href="/comida/index.html"><img src="/public/comida.png" class="pictograma" alt="Comida"></a>
         <a href="/emociones/index.html"><img src="/public/emociones.png" class="pictograma" alt="Emociones"></a>
         <a href="/viajes/index.html"><img src="/public/auto.png" class="pictograma" alt="Paseos"></a>
@@ -21,40 +20,7 @@
         <footer>HablaConmigo es una aplicación 100% gratuita creada por Raúl Rodríguez Clavero, 2025, Chile.</footer>
     </div>
     <script>
-            if (window.matchMedia('(display-mode: standalone)').matches || 
-        window.navigator.standalone === true) {
-        document.getElementById('installButton').style.display = 'none';
-    }
-        let deferredPrompt;
-
-        // Escuchar el evento beforeinstallprompt
-        window.addEventListener('beforeinstallprompt', (e) => {
-            // Evitar que Chrome muestre la notificación automática (opcional)
-            e.preventDefault();
-            // Guardar el evento para usarlo después
-            deferredPrompt = e;
-            // Mostrar el botón de instalación
-            const installButton = document.getElementById('installButton');
-            installButton.style.display = 'block';
-            // Manejar el clic en el botón
-            installButton.addEventListener('click', () => {
-                // Mostrar el prompt de instalación
-                deferredPrompt.prompt();
-                // Esperar la respuesta del usuario
-                deferredPrompt.userChoice.then((choiceResult) => {
-                    if (choiceResult.outcome === 'accepted') {
-                        console.log('Usuario aceptó instalar la PWA');
-                    } else {
-                        console.log('Usuario rechazó instalar la PWA');
-                    }
-                    // Limpiar el evento
-                    deferredPrompt = null;
-                    // Ocultar el botón después de la instalación
-                    installButton.style.display = 'none';
-                });
-            });
-        });
-
+     
         // Registrar el Service Worker
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
