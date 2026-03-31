@@ -1,6 +1,6 @@
 {
   "name": "HablaConmigo",
-  "short_name": "Habla",
+  "short_name": "HablaConmigo",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
