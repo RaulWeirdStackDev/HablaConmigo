@@ -21,7 +21,10 @@
         <footer>HablaConmigo es una aplicación 100% gratuita creada por Raúl Rodríguez Clavero, 2025, Chile.</footer>
     </div>
     <script>
-        // Variable para almacenar el evento de instalación
+            if (window.matchMedia('(display-mode: standalone)').matches || 
+        window.navigator.standalone === true) {
+        document.getElementById('installButton').style.display = 'none';
+    }
         let deferredPrompt;
 
         // Escuchar el evento beforeinstallprompt
