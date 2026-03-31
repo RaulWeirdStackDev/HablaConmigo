@@ -1,4 +1,4 @@
-const CACHE_NAME = 'hablaconmigo-v3';
+const CACHE_NAME = 'hablaconmigo-v4';
 const urlsToCache = [
   '/',
   '/index.html',
