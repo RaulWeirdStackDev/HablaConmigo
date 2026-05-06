@@ -1,6 +1,7 @@
 {
   "name": "HablaConmigo",
   "short_name": "HablaConmigo",
+  "version": "1.0.1",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -15,12 +16,6 @@
   "lang": "es-CL",
   "dir": "ltr",
   "icons": [
-    {
-      "src": "/public/logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any"
-    },
     {
       "src": "/public/logo.png",
       "sizes": "512x512",
